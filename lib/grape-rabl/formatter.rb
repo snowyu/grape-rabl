@@ -30,6 +30,7 @@ module Grape
 
       def rabl(endpoint)
         if template = rablable?(endpoint)
+          puts "template==>:#{template}"
           yield template
         else
           old_after
